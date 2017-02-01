@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deneme</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+  <ul class="menu">
+    <li><a href="/resumes/new">Upload</a></li>
+    <li><a href="/resumes">Cursors</a></li>
+    <li><a href="#0">Contact</a></li>
+    <li><a href="#0" class="dropdownStart">Dropdown <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+        <li><a href="#0">Action</a></li>
+        <li><a href="#0">Another action</a></li>
+        <li><a href="#0">Something else here</a></li>
+      </ul>
+
+    </li>
+  </ul>
+  <div class="toggle">
+    <span class="span" id="one"></span>
+    <span class="span" id="two"></span>
+  </div>
+
+</nav>
+        <div class = "container" style = "padding-top:20px;">
+           <%= yield %>
+        </div>
+     </body>
+
+</html>
