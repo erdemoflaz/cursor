@@ -6,6 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 gem 'carrierwave', '~> 0.9'
+gem 'mini_magick'
+gem "rmagick", "~> 2.13.4"
+
 
 gem 'bootstrap-sass', '~> 2.3.2'
 

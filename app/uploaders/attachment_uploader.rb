@@ -2,9 +2,12 @@
 
 class AttachmentUploader < CarrierWave::Uploader::Base
 
+  require 'carrierwave/processing/mini_magick'
+
+
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+   include CarrierWave::RMagick
+   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -20,7 +23,7 @@ class AttachmentUploader < CarrierWave::Uploader::Base
 
 
   def extension_white_list
-     %w(jpg doc htm html docx)
+     %w(gif jpg jpeg png)
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -31,11 +34,20 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
+
+  process resize_to_fit: [90, 90]
+
+   version :thumb do
+     process resize_to_fill: [90,90]
+   end
+
+
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   #
   # def scale(width, height)
   #   # do something
+  #     process :resize_to_fit => [50, 50]
   # end
 
   # Create different versions of your uploaded files:

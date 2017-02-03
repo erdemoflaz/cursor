@@ -6,32 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"></script>
+
   </head>
-
   <body>
-    <nav>
-  <ul class="menu">
-    <li><a href="/resumes/new">Upload</a></li>
-    <li><a href="/resumes">Cursors</a></li>
-    <li><a href="#0">Contact</a></li>
-    <li><a href="#0" class="dropdownStart">Dropdown <span class="arrow">&#9660;</span></a>
-      <ul class="dropdown">
-        <li><a href="#0">Action</a></li>
-        <li><a href="#0">Another action</a></li>
-        <li><a href="#0">Something else here</a></li>
-      </ul>
-
-    </li>
-  </ul>
-  <div class="toggle">
-    <span class="span" id="one"></span>
-    <span class="span" id="two"></span>
-  </div>
-
-</nav>
-        <div class = "container" style = "padding-top:20px;">
-           <%= yield %>
-        </div>
-     </body>
-
+      <div class="menu">
+      	<div class="menu_orta">
+      		<ul>
+            <a href="/resumes/new"><li>Upload</li></a>
+            <a href="/resumes"><li>Cursor</li></a>
+      			<a href="/resumes"><li>Best Cursors</li></a>
+      		</ul>
+      	</div>
+      </div>
+      <div class = "container" style = "padding-top:20px;">
+         <%= yield %>
+      </div>
+  </body>
 </html>
