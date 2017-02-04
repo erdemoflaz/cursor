@@ -3,72 +3,29 @@
       <%= flash[:notice] %>
    </div>
 <% end %>
-
-
-<!-- <%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %> -->
-
-<!-- <table class = "table table-bordered table-striped">
-   <thead>.
-      <tr>
-         <th>Name</th>
-         <th>Download Link</th>
-         <th> </th>
-      </tr>
-   </thead> -->
-
    <script>
    new Clipboard('.copy');
    function myFunction(gelen) {
-
-     $('body').css({
-         'cursor': 'url("http://localhost:3000'+gelen+'"), auto'
-     });
-     console.log("http://localhost:3000"+gelen+"}");
+       $('body').css({
+           'cursor': 'url("http://localhost:3000'+gelen+'"), auto'
+       });
     }
    </script>
-
-
    <div class="content">
      <div class="aboutus">
      	OnlineCursorMaker.com <br> <br> The Best Online Cursor Maker
      </div>
 <% counter =0 %>
        <% @resumes.each do |resume| %>
-
-
           	<span class="cursor">
-
               <div class="buttons">
                 <button onclick="myFunction('<%= resume.attachment %>')" class="copy btn btn-info" data-clipboard-text="<%= resume.name %>">try
                 </button>
                 <button class="copy btn btn-success" data-clipboard-text="<%= resume.name %>">copy
                 </button>
               </div>
-
               <span class="glyphicon glyphicon-search" aria-hidden="true"> </span>
           	 <%= image_tag(resume.attachment) %>
           	</span>
-
-
-              <!-- <input type="text" id="copyButton" name="" value="<%= image_tag(resume.attachment) %>"> -->
        <% end %>
    </div>
-
-
-
-
-
-   <!-- <tbody>
-      <% @resumes.each do |resume| %>
-
-         <tr>
-            <td class="resim"><%= image_tag(resume.attachment, size:"35") %></td>
-            <td><%= resume.name %></td>
-            <td><%= link_to "Download Resume", resume.attachment_url %></td>
-            <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
-         </tr>
-
-      <% end %>
-   </tbody>
-
-</table> -->

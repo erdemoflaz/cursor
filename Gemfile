@@ -9,7 +9,6 @@ gem 'carrierwave', '~> 0.9'
 gem 'mini_magick'
 gem "rmagick", "~> 2.13.4"
 
-
 gem 'bootstrap-sass', '~> 2.3.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
