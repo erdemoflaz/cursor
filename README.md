@@ -1,9 +1,11 @@
-# README
+# CURSOR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Online olarak ürettiğiniz cursorlerini websitenizde rahatlıkla kullanabileceğiniz online cursor maker tool'udur 
 
-Things you may want to cover:
+Kullanılan servisler
+* ruby on rails | heroku | postgresql | aws | cloudinary
+
+Coding by @erdemoflaz
 
 * Ruby version
 
